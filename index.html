@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TrackX — Track Your Day. Build Your Streak.</title>
+  <meta name="description" content="Track habits, focus, wellness and personal progress with TrackX.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TrackX — Track Your Day. Build Your Streak.">
+  <meta property="og:description" content="Track habits, focus, wellness and personal progress with TrackX.">
+  <meta property="og:site_name" content="TrackX">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TrackX — Track Your Day. Build Your Streak.">
+  <meta name="twitter:description" content="Track habits, focus, wellness and personal progress with TrackX.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+  <!-- Instant Theme Restorer (Anti-Flash) -->
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('trackx_theme');
+        if (saved === 'dark' || saved === 'grey') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Favicon Emoji -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+
+<body>
+
+  <!-- Fullscreen Particle Canvas for Streak & Milestone Celebrations -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- =========================================================================
+       TRACKX PUBLIC HOMEPAGE / LANDING PAGE
+       ========================================================================= -->
+  <div id="publicLanding" class="public-landing">
+
+    <!-- 1. PUBLIC STICKY NAVBAR -->
+    <header class="landing-header" role="banner">
+      <div class="landing-container">
+        <div class="landing-nav-inner">
+          <!-- Logo Brand -->
+          <a href="#" class="landing-brand" aria-label="TrackX Home">
+            <div class="landing-brand-logo">X</div>
+            <span class="landing-brand-name">TRACKX</span>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="landing-nav-desktop" aria-label="Public Navigation">
+            <ul class="landing-nav-links">
+              <li><a href="#features" class="landing-nav-link">Features</a></li>
+              <li><a href="#how-it-works" class="landing-nav-link">How It Works</a></li>
+              <li><a href="#preview" class="landing-nav-link">Showcase</a></li>
+              <li><a href="#about" class="landing-nav-link">About</a></li>
+              <li><a href="#feedback" class="landing-nav-link">Feedback</a></li>
+              <li><a href="#faq" class="landing-nav-link">FAQ</a></li>
+            </ul>
+          </nav>
+
+          <!-- Desktop Actions -->
+          <div class="landing-nav-actions">
+            <a href="#login" class="btn-landing-login">Log In</a>
+            <a href="#signup" class="btn-landing-primary">Get Started</a>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="landing-mobile-toggle" id="landingMobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="landing-mobile-menu" id="landingMobileMenu" role="region" aria-label="Mobile Navigation Menu">
+        <ul class="landing-mobile-nav-links">
+          <li><a href="#features" class="landing-mobile-nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="landing-mobile-nav-link">How It Works</a></li>
+          <li><a href="#preview" class="landing-mobile-nav-link">Showcase</a></li>
+          <li><a href="#about" class="landing-mobile-nav-link">About</a></li>
+          <li><a href="#feedback" class="landing-mobile-nav-link">Feedback</a></li>
+          <li><a href="#faq" class="landing-mobile-nav-link">FAQ</a></li>
+        </ul>
+        <div class="landing-mobile-actions">
+          <a href="#signup" class="btn-hero-primary" style="width: 100%; justify-content: center;">Get Started Free</a>
+          <a href="#login" class="btn-hero-secondary" style="width: 100%; justify-content: center;">Log In</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="landing-hero" id="home">
+      <div class="landing-container">
+        <div class="landing-hero-grid">
+          
+          <!-- Left Column: Copy & Actions -->
+          <div class="landing-hero-text">
+            <div class="landing-eyebrow">
+              <span class="landing-eyebrow-dot"></span>
+              YOUR DAY, TRACKED.
+            </div>
+
+            <h1 class="landing-hero-title">
+              Build better days, one habit at a time.
+            </h1>
+
+            <p class="landing-hero-subtitle">
+              Track your habits, focus, wellness and progress in one calm, organized space.
+            </p>
+
+            <div class="landing-hero-cta-group">
+              <a href="#signup" class="btn-hero-primary">
+                <span>Get Started Free</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#how-it-works" class="btn-hero-secondary">
+                See How It Works
+              </a>
+            </div>
+
+            <p class="landing-hero-microcopy">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>No complicated setup. Start tracking in minutes.</span>
+            </p>
+          </div>
+
+          <!-- Right Column: Realistic Product Preview Visual -->
+          <div class="landing-hero-visual" aria-hidden="true">
+            <div class="hero-product-card">
+              
+              <!-- Card Top Header -->
+              <div class="hero-product-topbar">
+                <div class="hero-product-date-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>Today • Sep 24</span>
+                </div>
+                <div class="hero-product-status-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Active Cadence</span>
+                </div>
+              </div>
+
+              <!-- Hero Score Banner -->
+              <div class="hero-product-score-row">
+                <div class="hero-score-info-mini">
+                  <span class="hero-score-label">Daily Performance</span>
+                  <span class="hero-score-headline">92 Score • Peak Performance</span>
+                  <span class="hero-score-sub">Optimal execution velocity across core routines</span>
+                </div>
+                <div class="hero-score-badge-circle">
+                  <span class="hero-score-num">92</span>
+                  <span class="hero-score-pts">PTS</span>
+                </div>
+              </div>
+
+              <!-- Habit Checklist Mini -->
+              <div class="hero-product-habits-title">Today's Habits (3 of 4 Complete)</div>
+              <div class="hero-product-habit-list">
+                <div class="hero-product-habit-item">
+                  <div class="hero-habit-left">
+                    <span class="hero-habit-checkbox">✓</span>
+                    <span class="hero-habit-name">Morning Meditation</span>
+                  </div>
+                  <span class="hero-habit-category-tag">Mind • 10m</span>
+                </div>
+
+                <div class="hero-product-habit-item">
+                  <div class="hero-habit-left">
+                    <span class="hero-habit-checkbox">✓</span>
+                    <span class="hero-habit-name">Deep Work Session</span>
+                  </div>
+                  <span class="hero-habit-category-tag">Focus • 90m</span>
+                </div>
+
+                <div class="hero-product-habit-item">
+                  <div class="hero-habit-left">
+                    <span class="hero-habit-checkbox">✓</span>
+                    <span class="hero-habit-name">Read 20 Pages</span>
+                  </div>
+                  <span class="hero-habit-category-tag">Growth</span>
+                </div>
+
+                <div class="hero-product-habit-item" style="opacity: 0.85;">
+                  <div class="hero-habit-left">
+                    <span class="hero-habit-checkbox pending"></span>
+                    <span class="hero-habit-name">Evening Stretch & Rest</span>
+                  </div>
+                  <span class="hero-habit-category-tag">Body</span>
+                </div>
+              </div>
+
+              <!-- Telemetry Widgets Mini -->
+              <div class="hero-product-widgets-row">
+                <div class="hero-mini-widget">
+                  <span class="hero-mini-widget-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    Water
+                  </span>
+                  <span class="hero-mini-widget-val">2.0L / 2.5L</span>
+                </div>
+
+                <div class="hero-mini-widget">
+                  <span class="hero-mini-widget-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    Sleep
+                  </span>
+                  <span class="hero-mini-widget-val">7.5h Rest</span>
+                </div>
+
+                <div class="hero-mini-widget">
+                  <span class="hero-mini-widget-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"/></svg>
+                    Streak
+                  </span>
+                  <span class="hero-mini-widget-val">12 Days</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VALUE STRIP -->
+    <div class="landing-value-strip">
+      <div class="landing-container">
+        <div class="landing-value-box">
+          <span class="landing-value-title">ONE PLACE FOR YOUR DAY</span>
+          <div class="landing-value-items">
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Habits</span>
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Focus</span>
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Wellness</span>
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Progress</span>
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Streaks</span>
+            <span class="landing-value-pill"><span class="landing-value-check">✓</span> Goals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. FEATURES SECTION (6 CARDS) -->
+    <section class="landing-section" id="features">
+      <div class="landing-container">
+        <div class="landing-section-header">
+          <span class="landing-section-tag">CAPABILITIES</span>
+          <h2 class="landing-section-title">Everything you need to understand your day.</h2>
+          <p class="landing-section-desc">
+            A unified system designed to turn daily actions into long-term personal momentum.
+          </p>
+        </div>
+
+        <div class="landing-features-grid">
+          
+          <!-- Feature 1: Habits -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Daily Habits</h3>
+            <p class="feature-card-text">
+              Build consistent routines and keep track of what matters every day with clean, frictionless check-ins.
+            </p>
+          </div>
+
+          <!-- Feature 2: Progress -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Progress Tracking</h3>
+            <p class="feature-card-text">
+              See how your consistency changes over time with meaningful progress insights and skill analytics.
+            </p>
+          </div>
+
+          <!-- Feature 3: Focus -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Focus</h3>
+            <p class="feature-card-text">
+              Create focused work sessions with integrated timers and understand where your productive hours go.
+            </p>
+          </div>
+
+          <!-- Feature 4: Wellness -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Wellness</h3>
+            <p class="feature-card-text">
+              Keep an eye on sleep, water, exercise and daily wellbeing without switching between different apps.
+            </p>
+          </div>
+
+          <!-- Feature 5: Streaks & Achievements -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Streaks & Achievements</h3>
+            <p class="feature-card-text">
+              Turn consistency into momentum with streaks, milestones and achievements that celebrate deliberate effort.
+            </p>
+          </div>
+
+          <!-- Feature 6: Calendar & History -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Calendar & History</h3>
+            <p class="feature-card-text">
+              Look back at your days and understand your patterns over time with detailed monthly views and logs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOW IT WORKS SECTION -->
+    <section class="landing-section" id="how-it-works">
+      <div class="landing-container">
+        <div class="landing-section-header">
+          <span class="landing-section-tag">WORKFLOW</span>
+          <h2 class="landing-section-title">How TrackX Works</h2>
+          <p class="landing-section-desc">
+            Three intentional steps from morning routine to evening reflection.
+          </p>
+        </div>
+
+        <div class="landing-steps-row">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-card-title">Set Your Habits</h3>
+            <p class="step-card-text">
+              Choose what you want to improve. Group by focus, health, or mind to build a routine that fits your lifestyle.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-card-title">Track Your Day</h3>
+            <p class="step-card-text">
+              Check in, focus and record your progress as you move through your day with quick single-tap interactions.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-card-title">Understand Your Progress</h3>
+            <p class="step-card-text">
+              Use your history, charts and streaks to see how you're improving over weeks and months with honest data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. WHY TRACKX (PHILOSOPHY) -->
+    <section class="landing-section" id="why">
+      <div class="landing-container">
+        <div class="landing-why-grid">
+          
+          <div class="landing-why-content">
+            <span class="landing-section-tag">PHILOSOPHY</span>
+            <h3>Progress becomes visible when you start paying attention.</h3>
+            <p>
+              TrackX is designed to turn everyday actions into something you can understand. Instead of relying on fleeting motivation alone, TrackX helps you:
+            </p>
+
+            <ul class="landing-why-points">
+              <li class="landing-why-point">
+                <span class="landing-why-bullet">✓</span>
+                <span>Build consistency without feeling overwhelmed</span>
+              </li>
+              <li class="landing-why-point">
+                <span class="landing-why-bullet">✓</span>
+                <span>Notice patterns across work, rest and daily wellbeing</span>
+              </li>
+              <li class="landing-why-point">
+                <span class="landing-why-bullet">✓</span>
+                <span>Understand genuine progress with grounded telemetry</span>
+              </li>
+              <li class="landing-why-point">
+                <span class="landing-why-bullet">✓</span>
+                <span>Celebrate milestones that mark your personal growth</span>
+              </li>
+              <li class="landing-why-point">
+                <span class="landing-why-bullet">✓</span>
+                <span>Improve gradually, one percent better every single day</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="landing-why-quote-card">
+            <p class="landing-quote-text">
+              "Small actions become meaningful when you can see them, understand them and stay consistent with them."
+            </p>
+            <span class="landing-quote-author">— The TrackX Principle</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PRODUCT PREVIEW SECTION -->
+    <section class="landing-section" id="preview">
+      <div class="landing-container">
+        <div class="landing-section-header">
+          <span class="landing-section-tag">INTERACTIVE SHOWCASE</span>
+          <h2 class="landing-section-title">Designed for focus. Built for clarity.</h2>
+          <p class="landing-section-desc">
+            Explore the core views that give you a complete perspective on your daily cadence.
+          </p>
+        </div>
+
+        <!-- Preview Tabs -->
+        <div class="landing-preview-tabs" role="tablist">
+          <button class="landing-tab-btn active" data-preview="dashboard" role="tab" aria-selected="true">Dashboard</button>
+          <button class="landing-tab-btn" data-preview="calendar" role="tab" aria-selected="false">Calendar</button>
+          <button class="landing-tab-btn" data-preview="progress" role="tab" aria-selected="false">Progress</button>
+          <button class="landing-tab-btn" data-preview="achievements" role="tab" aria-selected="false">Achievements</button>
+        </div>
+
+        <!-- Preview Showcase Panels -->
+        <div class="landing-preview-display">
+          
+          <!-- Panel 1: Dashboard -->
+          <div class="landing-preview-panel active" id="previewPanel-dashboard" role="tabpanel">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle, #C8C8C4); padding-bottom: 14px;">
+                <div>
+                  <h4 style="margin: 0; font-size: 18px; font-weight: 700; color: var(--text-primary, #202020);">Today's Dashboard</h4>
+                  <span style="font-size: 13px; color: var(--text-secondary, #666666);">Dynamic score, active checklist, and multi-wellness telemetry</span>
+                </div>
+                <span class="hero-product-status-pill">Live Daily View</span>
+              </div>
+              <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 20px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                  <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted, #8A8A86); margin-bottom: 12px;">Active Habits</div>
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; justify-content: space-between; padding: 10px; background: var(--bg-card, #F0F0EE); border-radius: 6px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                      <span style="font-weight: 600; font-size: 13.5px;">✓ Morning Reflection</span>
+                      <span style="font-size: 12px; color: var(--text-muted, #8A8A86);">Mind • Completed</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px; background: var(--bg-card, #F0F0EE); border-radius: 6px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                      <span style="font-weight: 600; font-size: 13.5px;">✓ High-Impact Deep Focus</span>
+                      <span style="font-size: 12px; color: var(--text-muted, #8A8A86);">Focus • 60m</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px; background: var(--bg-card, #F0F0EE); border-radius: 6px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                      <span style="font-weight: 600; font-size: 13.5px;">✓ 2.5L Hydration Goal</span>
+                      <span style="font-size: 12px; color: var(--text-muted, #8A8A86);">Wellness • Completed</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 16px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4); text-align: center;">
+                    <div style="font-size: 28px; font-weight: 800; color: var(--primary, #3A3A38);">92%</div>
+                    <div style="font-size: 12px; font-weight: 600; color: var(--text-secondary, #666666);">Daily Score</div>
+                  </div>
+                  <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 16px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4); text-align: center;">
+                    <div style="font-size: 28px; font-weight: 800; color: var(--primary, #3A3A38);">12d</div>
+                    <div style="font-size: 12px; font-weight: 600; color: var(--text-secondary, #666666);">Current Streak</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Calendar -->
+          <div class="landing-preview-panel" id="previewPanel-calendar" role="tabpanel">
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle, #C8C8C4); padding-bottom: 14px;">
+                <div>
+                  <h4 style="margin: 0; font-size: 18px; font-weight: 700; color: var(--text-primary, #202020);">Calendar & Historical Log</h4>
+                  <span style="font-size: 13px; color: var(--text-secondary, #666666);">Full month perspective with completion indicators and day-by-day logs</span>
+                </div>
+                <span class="hero-product-status-pill">Historical Cadence</span>
+              </div>
+              <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 24px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; text-align: center;">
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">M</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">T</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">W</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">T</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">F</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">S</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86);">S</span>
+                  <!-- Sample row of active days -->
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">18 • 100%</div>
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">19 • 85%</div>
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">20 • 90%</div>
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">21 • 100%</div>
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">22 • 75%</div>
+                  <div style="padding: 12px; background: var(--bg-card, #F0F0EE); border-radius: 6px; font-size: 13px; font-weight: 600;">23 • 95%</div>
+                  <div style="padding: 12px; background: var(--primary, #3A3A38); color: var(--text-inverse, #fff); border-radius: 6px; font-size: 13px; font-weight: 700;">24 • Today</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Progress -->
+          <div class="landing-preview-panel" id="previewPanel-progress" role="tabpanel">
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle, #C8C8C4); padding-bottom: 14px;">
+                <div>
+                  <h4 style="margin: 0; font-size: 18px; font-weight: 700; color: var(--text-primary, #202020);">Progress & Category Distribution</h4>
+                  <span style="font-size: 13px; color: var(--text-secondary, #666666);">Understand skill distribution, streaks, and completion trends</span>
+                </div>
+                <span class="hero-product-status-pill">Analytics</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                  <div style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86); margin-bottom: 6px;">MIND</div>
+                  <div style="font-size: 24px; font-weight: 800; color: var(--text-primary, #202020);">94%</div>
+                  <div style="font-size: 12px; color: var(--success, #4F6B55); font-weight: 600; margin-top: 4px;">High consistency</div>
+                </div>
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                  <div style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86); margin-bottom: 6px;">BODY</div>
+                  <div style="font-size: 24px; font-weight: 800; color: var(--text-primary, #202020);">88%</div>
+                  <div style="font-size: 12px; color: var(--success, #4F6B55); font-weight: 600; margin-top: 4px;">Steady baseline</div>
+                </div>
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                  <div style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86); margin-bottom: 6px;">FOCUS</div>
+                  <div style="font-size: 24px; font-weight: 800; color: var(--text-primary, #202020);">91%</div>
+                  <div style="font-size: 12px; color: var(--success, #4F6B55); font-weight: 600; margin-top: 4px;">+12% this week</div>
+                </div>
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4);">
+                  <div style="font-size: 12px; font-weight: 700; color: var(--text-muted, #8A8A86); margin-bottom: 6px;">GROWTH</div>
+                  <div style="font-size: 24px; font-weight: 800; color: var(--text-primary, #202020);">85%</div>
+                  <div style="font-size: 12px; color: var(--success, #4F6B55); font-weight: 600; margin-top: 4px;">Active streak</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Achievements -->
+          <div class="landing-preview-panel" id="previewPanel-achievements" role="tabpanel">
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle, #C8C8C4); padding-bottom: 14px;">
+                <div>
+                  <h4 style="margin: 0; font-size: 18px; font-weight: 700; color: var(--text-primary, #202020);">Milestones & Mastery</h4>
+                  <span style="font-size: 13px; color: var(--text-secondary, #666666);">Earn player XP and unlock meaningful achievement badges</span>
+                </div>
+                <span class="hero-product-status-pill">Achievements</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4); display: flex; align-items: center; gap: 14px;">
+                  <span style="font-size: 28px;">🌱</span>
+                  <div>
+                    <div style="font-size: 14px; font-weight: 700;">First Step</div>
+                    <div style="font-size: 12px; color: var(--text-secondary, #666666);">Complete your first habit check-in</div>
+                  </div>
+                </div>
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4); display: flex; align-items: center; gap: 14px;">
+                  <span style="font-size: 28px;">🔥</span>
+                  <div>
+                    <div style="font-size: 14px; font-weight: 700;">Consistency Master</div>
+                    <div style="font-size: 12px; color: var(--text-secondary, #666666);">Maintain a 7-day uninterrupted streak</div>
+                  </div>
+                </div>
+                <div style="background: var(--bg-card-elevated, #F5F5F3); padding: 18px; border-radius: 8px; border: 1px solid var(--border-subtle, #C8C8C4); display: flex; align-items: center; gap: 14px;">
+                  <span style="font-size: 28px;">⚡</span>
+                  <div>
+                    <div style="font-size: 14px; font-weight: 700;">Deep Focus Champion</div>
+                    <div style="font-size: 12px; color: var(--text-secondary, #666666);">Log 500+ minutes of timed focus</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ABOUT TRACKX SECTION -->
+    <section class="landing-section" id="about">
+      <div class="landing-container">
+        <div class="landing-about-card">
+          <span class="landing-section-tag">OUR PURPOSE</span>
+          <h3>Built for people who want to make their days count.</h3>
+          <p>
+            TrackX was created around a simple idea: small actions become meaningful when you can see them, understand them and stay consistent with them.
+          </p>
+          <p>
+            The goal is to give users a single, quiet place to track the parts of everyday life that contribute to personal growth — without notifications nagging you or algorithms trying to capture your attention.
+          </p>
+
+          <div class="landing-about-pillars">
+            <div class="about-pillar">
+              <h4>Clarity over Clutter</h4>
+              <p>Zero advertisements, zero vanity social feeds, and zero distracting noise. Just your personal cadence.</p>
+            </div>
+            <div class="about-pillar">
+              <h4>Factual over Fake</h4>
+              <p>Your data reflects genuine check-ins and honest habits, with zero fabricated statistics or artificial inflation.</p>
+            </div>
+            <div class="about-pillar">
+              <h4>Privacy First</h4>
+              <p>Secure cloud synchronization with Firebase, or 100% private local storage in your browser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FEEDBACK SECTION -->
+    <section class="landing-section" id="feedback">
+      <div class="landing-container-narrow">
+        <div class="landing-section-header" style="margin-bottom: 32px;">
+          <span class="landing-section-tag">COMMUNITY &amp; INPUT</span>
+          <h2 class="landing-section-title">Help make TrackX better.</h2>
+          <p class="landing-section-desc">
+            Your feedback helps us understand what works, what doesn't and what should come next.
+          </p>
+        </div>
+
+        <div class="landing-feedback-card">
+          <form id="landingFeedbackForm" novalidate>
+            <div class="landing-form-row">
+              <div class="landing-form-group">
+                <label class="landing-form-label" for="feedbackName">Name (optional)</label>
+                <input type="text" id="feedbackName" class="landing-form-input" placeholder="e.g. Alex Rivera">
+              </div>
+
+              <div class="landing-form-group">
+                <label class="landing-form-label" for="feedbackEmail">Email (optional)</label>
+                <input type="email" id="feedbackEmail" class="landing-form-input" placeholder="e.g. alex@example.com">
+              </div>
+            </div>
+
+            <div class="landing-form-group">
+              <label class="landing-form-label" for="feedbackType">Feedback Type</label>
+              <select id="feedbackType" class="landing-form-select">
+                <option value="General Feedback">General Feedback</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="UI / Design">UI / Design</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="landing-form-group">
+              <label class="landing-form-label" for="feedbackMessage">Your Message</label>
+              <textarea id="feedbackMessage" class="landing-form-textarea" placeholder="Tell us what you love, what felt confusing, or what you'd like to see added..." required></textarea>
+            </div>
+
+            <p class="landing-form-helper">
+              Please don't include sensitive personal information or passwords.
+            </p>
+
+            <button type="submit" class="btn-hero-primary" id="feedbackSubmitBtn">
+              Send Feedback
+            </button>
+          </form>
+
+          <!-- Success Confirmation Box -->
+          <div class="landing-form-success" id="landingFeedbackSuccess">
+            <h4>Thank You for Your Feedback</h4>
+            <p>Your thoughts have been received. We review every submission thoughtfully to guide TrackX's roadmap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="landing-section" id="faq">
+      <div class="landing-container-narrow">
+        <div class="landing-section-header">
+          <span class="landing-section-tag">QUESTIONS &amp; ANSWERS</span>
+          <h2 class="landing-section-title">Frequently Asked Questions</h2>
+          <p class="landing-section-desc">
+            Everything you need to know about getting started with TrackX.
+          </p>
+        </div>
+
+        <div class="landing-faq-list">
+          
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is TrackX?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              TrackX is a personal daily tracking and self-improvement platform. It brings together your habits, deep focus sessions, wellness logs (water, sleep, exercise), streaks, and progress insights in a single, calm workspace.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do I need an account to use TrackX?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              No mandatory setup is required to get started. You can explore TrackX immediately as a guest. Creating a free account allows you to securely synchronize and back up your habits and history across all your devices via Firebase.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I use Google to sign in?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. TrackX features full one-click Google Authentication. You can sign up or log in securely with your Google account without remembering an extra password.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What can I track with TrackX?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              You can track customizable daily habits (categorized under Mind, Body, Focus, or Growth), daily hydration intake, sleep duration and quality, active exercise time, and deep focus intervals with the integrated Pomodoro-style timer.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Does TrackX save my progress?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. If you are signed in, your daily check-ins are saved in real-time to Google Cloud Firestore. If you are offline or using guest mode, your data is securely cached in your browser's LocalStorage and will sync when reconnected.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I use TrackX on mobile devices?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. TrackX is fully responsive and designed to run smoothly on desktop, tablet, and mobile browsers with intuitive touch-friendly controls and bottom navigation.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FINAL CTA SECTION -->
+    <div class="landing-container">
+      <div class="landing-final-cta">
+        <h2>Start building better days.</h2>
+        <p>Your next check-in is the first step toward lasting personal momentum.</p>
+        <div class="landing-final-cta-btns">
+          <a href="#signup" class="btn-hero-primary">
+            <span>Get Started Free</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#login" class="btn-hero-secondary">
+            Log In
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. PUBLIC FOOTER -->
+    <footer class="landing-footer" role="contentinfo">
+      <div class="landing-container">
+        <div class="landing-footer-grid">
+          
+          <div class="landing-footer-brand">
+            <div class="landing-brand">
+              <div class="landing-brand-logo">X</div>
+              <span class="landing-brand-name">TRACKX</span>
+            </div>
+            <p>Track your day. Build your streak. Become your best self.</p>
+          </div>
+
+          <div class="landing-footer-col">
+            <h4>Product</h4>
+            <ul class="landing-footer-links">
+              <li><a href="#features" class="landing-footer-link">Features</a></li>
+              <li><a href="#how-it-works" class="landing-footer-link">How It Works</a></li>
+              <li><a href="#preview" class="landing-footer-link">Progress</a></li>
+              <li><a href="#preview" class="landing-footer-link">Achievements</a></li>
+            </ul>
+          </div>
+
+          <div class="landing-footer-col">
+            <h4>Company</h4>
+            <ul class="landing-footer-links">
+              <li><a href="#about" class="landing-footer-link">About</a></li>
+              <li><a href="#feedback" class="landing-footer-link">Feedback</a></li>
+              <li><a href="mailto:support@trackx.app" class="landing-footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="landing-footer-col">
+            <h4>Legal</h4>
+            <ul class="landing-footer-links">
+              <li><a href="#privacy" class="landing-footer-link" data-open-privacy>Privacy</a></li>
+              <li><a href="#terms" class="landing-footer-link" data-open-terms>Terms</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="landing-footer-bottom">
+          <span>&copy; 2026 TrackX. All rights reserved.</span>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="landing-github-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 13. PRIVACY MODAL -->
+    <div class="landing-legal-modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+      <div class="landing-legal-content">
+        <button class="landing-legal-close" id="closePrivacyBtn" aria-label="Close Privacy Modal">&times;</button>
+        <h3 id="privacyModalTitle">Privacy Policy</h3>
+        <p><strong>Effective Date:</strong> January 2026</p>
+        <p>Your privacy is fundamental to TrackX. We build tools that help you reflect on your life, and we believe your personal cadence belongs to you.</p>
+        <h4>Information We Collect</h4>
+        <p>When you create an account, we collect your name, email address, and authentication identifiers provided through Google or Firebase Authentication. When you use TrackX, your habits, check-ins, focus minutes, and wellness logs are stored to provide the tracking features.</p>
+        <h4>How Your Data is Used</h4>
+        <p>Your data is used solely to render your personal dashboard, calculate your streaks, and sync across your devices. We do not sell, rent, or monetize your personal data or habits to any third party.</p>
+        <h4>Data Storage & Security</h4>
+        <p>Cloud data is encrypted in transit and at rest using Google Cloud Firestore and Firebase security rules. You can export or delete your data at any time from your Settings panel.</p>
+      </div>
+    </div>
+
+    <!-- 14. TERMS MODAL -->
+    <div class="landing-legal-modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+      <div class="landing-legal-content">
+        <button class="landing-legal-close" id="closeTermsBtn" aria-label="Close Terms Modal">&times;</button>
+        <h3 id="termsModalTitle">Terms of Service</h3>
+        <p><strong>Effective Date:</strong> January 2026</p>
+        <h4>1. Acceptance of Terms</h4>
+        <p>By accessing or using TrackX, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may discontinue use of the platform.</p>
+        <h4>2. Personal Use</h4>
+        <p>TrackX is provided for personal daily organization and productivity tracking. You agree not to misuse the service or attempt to disrupt its technical infrastructure.</p>
+        <h4>3. Wellness Disclaimer</h4>
+        <p>TrackX is a personal productivity and habit tracking tool. It does not provide medical, psychological, or health advice. Wellness metrics like sleep and hydration are self-reported benchmarks for personal awareness.</p>
+        <h4>4. Modifications</h4>
+        <p>We may update the service and these terms periodically to improve user experience. Continued use signifies acceptance of updated terms.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================================
+       AUTHENTICATION & LOGIN SCREENS
+       ================================
+       ========================================= -->
+  <!-- TrackX Authentication Minimal Loading Screen (Phase 5: Zero-flash protection) -->
+  <div id="authLoadingScreen" class="auth-loading-screen hidden" style="display: none;">
+    <div class="auth-loading-content">
+      <div class="brand-logo-icon auth-loading-logo">X</div>
+      <div class="auth-loading-spinner"></div>
+      <span class="auth-loading-text">Loading TrackX...</span>
+    </div>
+  </div>
+
+  <!-- Persistent Offline Network Warning Banner (Phase 6) -->
+  <div id="networkStatusBanner" class="network-status-banner" style="display: none;">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="1" y1="1" x2="23" y2="23"></line>
+      <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+      <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+      <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+      <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+    </svg>
+    <span>You're offline. Your changes will sync when you're connected.</span>
+  </div>
+
+  <!-- ==========================================
+       TRACKX AUTHENTICATION SYSTEM (Phase 1: Login)
+       ========================================== -->
+  <div id="authContainer" class="auth-wrapper hidden" style="display: none;">
+    <div class="auth-backdrop-glow"></div>
+    <div class="auth-card">
+
+      <!-- Subtle Back to Home Navigation -->
+      <div class="auth-card-top-nav">
+        <a href="#home" class="auth-back-to-home" id="authTopBackToHomeBtn" aria-label="Back to TrackX Home" title="Return to TrackX Homepage">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </div>
+
+      <!-- Shared Authentication Alert Banner -->
+      <div id="authAlert" class="auth-alert" style="display: none;" role="alert" aria-live="assertive">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="authAlertText"></span>
+      </div>
+
+      <!-- ==========================================
+           VIEW 1: LOGIN VIEW (Phase 1)
+           ========================================== -->
+      <div id="loginView" class="auth-view active">
+        <!-- Brand Header -->
+        <div class="auth-header">
+          <a href="#home" class="auth-brand-logo" aria-label="TrackX Home" title="TrackX Home">
+            <div class="brand-logo-icon">X</div>
+            <span class="auth-brand-name">TRACKX</span>
+          </a>
+          <h1 class="auth-title">Welcome back to TrackX</h1>
+          <p class="auth-tagline">
+            Track your day. Build your streak.<br>Become your best self.
+          </p>
+        </div>
+
+        <!-- Continue with Google (Official 4-Color Google Treatment) -->
+        <button type="button" class="btn-google-auth btn-google-trigger" id="googleLoginBtn"
+          aria-label="Continue with Google">
+          <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18">
+            <path fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05"
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+            <path fill="#EA4335"
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+          </svg>
+          <span class="btn-google-spinner" style="display: none;"></span>
+          <span class="btn-google-text">Continue with Google</span>
+        </button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span class="auth-divider-line"></span>
+          <span class="auth-divider-text">OR</span>
+          <span class="auth-divider-line"></span>
+        </div>
+
+        <!-- Email Login Form -->
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email</label>
+            <div class="auth-input-wrap">
+              <input type="email" id="loginEmail" class="auth-input" placeholder="Enter your email" autocomplete="email"
+                required aria-required="true">
+            </div>
+            <span class="auth-field-error" id="emailError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="auth-input-wrap">
+              <input type="password" id="loginPassword" class="auth-input" placeholder="Enter your password"
+                autocomplete="current-password" required aria-required="true">
+              <button type="button" class="auth-toggle-pwd-btn" id="togglePasswordBtn" aria-label="Show password"
+                aria-pressed="false" title="Show password">
+                <svg class="eye-open-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="auth-field-error" id="passwordError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <div class="auth-extra-row">
+            <a href="/forgot-password" class="auth-forgot-link" id="linkForgotPassword">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">
+            <span class="auth-btn-spinner" id="loginBtnSpinner" style="display: none;"></span>
+            <span class="auth-btn-text" id="loginBtnText">Log In</span>
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          <span class="auth-footer-text">Don't have an account?</span>
+          <a href="#signup" class="auth-signup-link" id="linkSignUp">Sign Up</a>
+        </div>
+        <div class="auth-guest-row" style="text-align: center; margin-top: 14px; display: flex; justify-content: center; gap: 16px; align-items: center;">
+          <a href="#home" class="auth-home-link" id="linkBackToHomeFromLogin" style="font-size: 13px; font-weight: 500; color: var(--text-secondary, #73726c); text-decoration: none; padding: 4px 8px;">
+            &larr; Back to Home
+          </a>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           VIEW 2: SIGN UP VIEW (Phase 2)
+           ========================================== -->
+      <div id="signupView" class="auth-view">
+        <!-- Brand Header -->
+        <div class="auth-header">
+          <a href="#home" class="auth-brand-logo" aria-label="TrackX Home" title="TrackX Home">
+            <div class="brand-logo-icon">X</div>
+            <span class="auth-brand-name">TRACKX</span>
+          </a>
+          <h1 class="auth-title">Create your TrackX account</h1>
+          <p class="auth-tagline">Start building better habits today.</p>
+        </div>
+
+        <!-- Continue with Google (Same style, handles both Login & Signup) -->
+        <button type="button" class="btn-google-auth btn-google-trigger" id="googleSignupBtn"
+          aria-label="Continue with Google">
+          <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18">
+            <path fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05"
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+            <path fill="#EA4335"
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+          </svg>
+          <span class="btn-google-spinner" style="display: none;"></span>
+          <span class="btn-google-text">Continue with Google</span>
+        </button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span class="auth-divider-line"></span>
+          <span class="auth-divider-text">OR</span>
+          <span class="auth-divider-line"></span>
+        </div>
+
+        <!-- Account Creation Form -->
+        <form id="signupForm" class="auth-form" novalidate>
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="signupName">Full name</label>
+            <div class="auth-input-wrap">
+              <input type="text" id="signupName" class="auth-input" placeholder="e.g. Alex Rivera" autocomplete="name"
+                required aria-required="true">
+            </div>
+            <span class="auth-field-error" id="signupNameError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="signupEmail">Email</label>
+            <div class="auth-input-wrap">
+              <input type="email" id="signupEmail" class="auth-input" placeholder="Enter your email"
+                autocomplete="email" required aria-required="true">
+            </div>
+            <span class="auth-field-error" id="signupEmailError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <!-- Password with Live Requirements Checklist -->
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Password</label>
+            <div class="auth-input-wrap">
+              <input type="password" id="signupPassword" class="auth-input" placeholder="Create a strong password"
+                autocomplete="new-password" required aria-required="true">
+              <button type="button" class="auth-toggle-pwd-btn" id="toggleSignupPasswordBtn" aria-label="Show password"
+                aria-pressed="false" title="Show password">
+                <svg class="eye-open-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="auth-field-error" id="signupPasswordError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+
+            <!-- Compact Password Requirements Indicator -->
+            <div class="password-requirements-box" id="passwordRequirementsBox">
+              <div class="password-req-grid">
+                <div class="password-req-item" id="reqLength">
+                  <span class="password-req-icon">●</span>
+                  <span>At least 8 characters</span>
+                </div>
+                <div class="password-req-item" id="reqUppercase">
+                  <span class="password-req-icon">●</span>
+                  <span>One uppercase letter</span>
+                </div>
+                <div class="password-req-item" id="reqLowercase">
+                  <span class="password-req-icon">●</span>
+                  <span>One lowercase letter</span>
+                </div>
+                <div class="password-req-item" id="reqNumber">
+                  <span class="password-req-icon">●</span>
+                  <span>One number</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label class="form-label" for="signupConfirmPassword">Confirm password</label>
+            <div class="auth-input-wrap">
+              <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="Confirm your password"
+                autocomplete="new-password" required aria-required="true">
+              <button type="button" class="auth-toggle-pwd-btn" id="toggleSignupConfirmBtn" aria-label="Show password"
+                aria-pressed="false" title="Show password">
+                <svg class="eye-open-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="auth-field-error" id="signupConfirmError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="signupSubmitBtn">
+            <span class="auth-btn-spinner" id="signupBtnSpinner" style="display: none;"></span>
+            <span class="auth-btn-text" id="signupBtnText">Create Account</span>
+          </button>
+        </form>
+
+        <!-- Bottom Link to Login -->
+        <div class="auth-footer">
+          <span class="auth-footer-text">Already have an account?</span>
+          <a href="#login" class="auth-signup-link" id="linkLoginFromSignup">Log In</a>
+        </div>
+        <div class="auth-guest-row" style="text-align: center; margin-top: 14px; display: flex; justify-content: center; gap: 16px; align-items: center;">
+          <a href="#home" class="auth-home-link" id="linkBackToHomeFromSignup" style="font-size: 13px; font-weight: 500; color: var(--text-secondary, #73726c); text-decoration: none; padding: 4px 8px;">
+            &larr; Back to Home
+          </a>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           VIEW 3: FORGOT PASSWORD VIEW (Phase 4)
+           ========================================== -->
+      <div id="forgotPasswordView" class="auth-view">
+        <!-- Brand Header -->
+        <div class="auth-header">
+          <a href="#home" class="auth-brand-logo" aria-label="TrackX Home" title="TrackX Home">
+            <div class="brand-logo-icon">X</div>
+            <span class="auth-brand-name">TRACKX</span>
+          </a>
+          <h1 class="auth-title">Forgot your password?</h1>
+          <p class="auth-tagline">Enter your email and we'll send you a password reset link.</p>
+        </div>
+
+        <!-- Initial Request State Form -->
+        <form id="forgotPasswordForm" class="auth-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="forgotEmail">Email</label>
+            <div class="auth-input-wrap">
+              <input type="email" id="forgotEmail" class="auth-input" placeholder="Enter your email"
+                autocomplete="email" required aria-required="true">
+            </div>
+            <span class="auth-field-error" id="forgotEmailError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="forgotSubmitBtn">
+            <span class="auth-btn-spinner" id="forgotBtnSpinner" style="display: none;"></span>
+            <span class="auth-btn-text" id="forgotBtnText">Send Reset Link</span>
+          </button>
+        </form>
+
+        <!-- Post-Send Success Card (Prevents account enumeration) -->
+        <div id="forgotSuccessCard" class="auth-status-card" style="display: none;">
+          <div class="auth-status-icon-wrap success">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="auth-status-title">Check your email</h3>
+          <p class="auth-status-desc">
+            If an account exists for this email, we've sent a password reset link.
+          </p>
+          <button type="button" class="auth-submit-btn" id="btnBackToLoginAfterForgot" style="margin-top: 14px;">
+            Back to Login
+          </button>
+        </div>
+
+        <div class="auth-footer">
+          <a href="#login" class="auth-back-link" id="linkBackToLoginFromForgot">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Back to Login</span>
+          </a>
+        </div>
+        <div class="auth-guest-row" style="text-align: center; margin-top: 14px; display: flex; justify-content: center; gap: 16px; align-items: center;">
+          <a href="#home" class="auth-home-link" id="linkBackToHomeFromForgot" style="font-size: 13px; font-weight: 500; color: var(--text-secondary, #73726c); text-decoration: none; padding: 4px 8px;">
+            &larr; Back to Home
+          </a>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           VIEW 4: RESET PASSWORD VIEW (Phase 4)
+           ========================================== -->
+      <div id="resetPasswordView" class="auth-view">
+        <!-- Brand Header -->
+        <div class="auth-header">
+          <a href="#home" class="auth-brand-logo" aria-label="TrackX Home" title="TrackX Home">
+            <div class="brand-logo-icon">X</div>
+            <span class="auth-brand-name">TRACKX</span>
+          </a>
+          <h1 class="auth-title">Create a new password</h1>
+          <p class="auth-tagline">Enter your new password below.</p>
+        </div>
+
+        <!-- Reset Password Form -->
+        <form id="resetPasswordForm" class="auth-form" novalidate>
+          <!-- New Password -->
+          <div class="form-group">
+            <label class="form-label" for="resetPassword">New password</label>
+            <div class="auth-input-wrap">
+              <input type="password" id="resetPassword" class="auth-input" placeholder="Enter new password"
+                autocomplete="new-password" required aria-required="true">
+              <button type="button" class="auth-toggle-pwd-btn" id="toggleResetPasswordBtn" aria-label="Show password"
+                aria-pressed="false" title="Show password">
+                <svg class="eye-open-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="auth-field-error" id="resetPasswordError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+
+            <!-- Compact Password Requirements Indicator -->
+            <div class="password-requirements-box" id="resetPasswordRequirementsBox">
+              <div class="password-req-grid">
+                <div class="password-req-item" id="resetReqLength">
+                  <span class="password-req-icon">●</span>
+                  <span>At least 8 characters</span>
+                </div>
+                <div class="password-req-item" id="resetReqUppercase">
+                  <span class="password-req-icon">●</span>
+                  <span>One uppercase letter</span>
+                </div>
+                <div class="password-req-item" id="resetReqLowercase">
+                  <span class="password-req-icon">●</span>
+                  <span>One lowercase letter</span>
+                </div>
+                <div class="password-req-item" id="resetReqNumber">
+                  <span class="password-req-icon">●</span>
+                  <span>One number</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confirm New Password -->
+          <div class="form-group">
+            <label class="form-label" for="resetConfirmPassword">Confirm new password</label>
+            <div class="auth-input-wrap">
+              <input type="password" id="resetConfirmPassword" class="auth-input" placeholder="Confirm new password"
+                autocomplete="new-password" required aria-required="true">
+              <button type="button" class="auth-toggle-pwd-btn" id="toggleResetConfirmBtn" aria-label="Show password"
+                aria-pressed="false" title="Show password">
+                <svg class="eye-open-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="auth-field-error" id="resetConfirmError" style="display: none;" role="alert"
+              aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="resetSubmitBtn">
+            <span class="auth-btn-spinner" id="resetBtnSpinner" style="display: none;"></span>
+            <span class="auth-btn-text" id="resetBtnText">Update Password</span>
+          </button>
+        </form>
+
+        <!-- Post-Reset Success Card -->
+        <div id="resetSuccessCard" class="auth-status-card" style="display: none;">
+          <div class="auth-status-icon-wrap success">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="auth-status-title">Password updated successfully.</h3>
+          <p class="auth-status-desc">You can now sign in with your new password.</p>
+          <button type="button" class="auth-submit-btn" id="btnBackToLoginAfterReset" style="margin-top: 14px;">
+            Back to Login
+          </button>
+        </div>
+
+        <!-- Invalid or Expired Link Card -->
+        <div id="resetInvalidCard" class="auth-status-card" style="display: none;">
+          <div class="auth-status-icon-wrap error">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="auth-status-title">Reset Link Expired or Invalid</h3>
+          <p class="auth-status-desc" id="resetInvalidDesc">
+            This password reset link is invalid or has already expired. Please request a new one.
+          </p>
+          <button type="button" class="auth-submit-btn" id="btnRequestNewResetLink" style="margin-top: 14px;">
+            Request New Link
+          </button>
+        </div>
+
+        <div class="auth-footer" id="resetFooterWrap">
+          <a href="#login" class="auth-back-link" id="linkBackToLoginFromReset">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Back to Login</span>
+          </a>
+        </div>
+        <div class="auth-guest-row" style="text-align: center; margin-top: 14px; display: flex; justify-content: center; gap: 16px; align-items: center;">
+          <a href="#home" class="auth-home-link" id="linkBackToHomeFromReset" style="font-size: 13px; font-weight: 500; color: var(--text-secondary, #73726c); text-decoration: none; padding: 4px 8px;">
+            &larr; Back to Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="app-container" style="display: none;">
+
+    <!-- ==========================================
+         DESKTOP SIDEBAR NAVIGATION
+         ========================================== -->
+    <aside class="app-sidebar" aria-label="Main Navigation">
+      <div class="brand-area">
+        <div class="brand-logo-icon">X</div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">TRACKX</span>
+          <span class="brand-tagline">Track. Build. Become.</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#today" class="nav-item active" data-view="today" id="navSidebarToday">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Today</span>
+        </a>
+
+        <a href="#habits" class="nav-item" data-view="habits" id="navSidebarHabits">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Habits</span>
+        </a>
+
+        <a href="#progress" class="nav-item" data-view="progress" id="navSidebarProgress">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span>Progress</span>
+        </a>
+
+        <a href="#calendar" class="nav-item" data-view="calendar" id="navSidebarCalendar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Calendar</span>
+        </a>
+
+        <a href="#achievements" class="nav-item" data-view="achievements" id="navSidebarAchievements">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+            <path d="M4 22h16"></path>
+            <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path>
+            <path d="M4.5 4h15v5a7.5 7.5 0 0 1-15 0V4z"></path>
+          </svg>
+          <span>Achievements</span>
+        </a>
+
+        <a href="#showcase" class="nav-item showcase-nav-item" id="navSidebarShowcase" style="margin-top: 6px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+          </svg>
+          <span>Product Tour</span>
+          <span class="showcase-nav-badge">10s</span>
+        </a>
+
+        <a href="#settings" class="nav-item" data-view="settings" id="navSidebarSettings" style="margin-top: 10px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer User Profile -->
+      <div class="sidebar-footer">
+        <div class="user-mini-card" id="sidebarUserCard" title="Profile & Preferences">
+          <div class="user-avatar-circle" id="sidebarUserAvatar"><span class="user-initials">TX</span></div>
+          <div class="user-details">
+            <span class="user-name" id="sidebarUserName">TrackX User</span>
+            <span class="user-email" id="sidebarUserEmail" style="display: none;"></span>
+            <span class="user-streak-pill" id="sidebarUserStreak">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z" />
+              </svg>
+              <span>0d streak</span>
+            </span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Switch Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="sidebar-logout-btn" id="sidebarLogoutBtn" aria-label="Sign Out" title="Sign Out of TrackX"
+            style="display: none;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==========================================
+         MAIN LAYOUT (Top Bar + View Containers)
+         ========================================== -->
+    <main class="main-layout" role="main">
+
+      <!-- Top Application Bar -->
+      <header class="top-bar">
+        <!-- Mobile Brand (Hidden on Desktop) -->
+        <div class="mobile-brand">
+          <div class="brand-logo-icon" style="width: 32px; height: 32px; font-size: 16px;">X</div>
+          <span class="brand-title" style="font-size: 17px;">TRACKX</span>
+        </div>
+
+        <!-- Date Navigator -->
+        <div class="date-navigator">
+          <button class="date-nav-btn" id="datePrevBtn" aria-label="Previous Day" title="Previous Day">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="date-nav-center" id="dateCenterLabel" title="Click to view Calendar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="color: var(--primary);">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span id="dateText">Today</span>
+            <button class="date-today-btn" id="dateTodayShortcut" style="display: none;">Today</button>
+          </div>
+
+          <button class="date-nav-btn" id="dateNextBtn" aria-label="Next Day" title="Next Day">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Top Actions -->
+        <div class="top-actions">
+          <!-- Product Tour Showcase Button -->
+          <button class="btn-showcase-pill" id="topShowcaseBtn" title="Watch Product Showcase & Tour"
+            aria-label="Watch Showcase">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="6 4 20 12 6 20 6 4"></polygon>
+            </svg>
+            <span class="desktop-text">Tour</span>
+          </button>
+
+          <button class="btn-primary" id="topQuickHabitBtn"
+            onclick="document.getElementById('newHabitModal').classList.add('active')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span class="desktop-text">New Habit</span>
+          </button>
+
+          <!-- Top Header Theme Toggle (White / Grey Mode) -->
+          <button class="icon-btn-header theme-toggle-btn" id="topThemeToggleBtn" aria-label="Toggle Theme" title="Switch Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Notification Bell & Dropdown Popover -->
+          <div class="notification-bell-wrapper" id="notificationBellWrapper">
+            <button class="icon-btn-header" id="notificationBellBtn" aria-label="Notifications" aria-expanded="false"
+              title="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="notification-badge" id="notificationBadge" style="display: none;">0</span>
+            </button>
+
+            <!-- Dropdown Popover Panel -->
+            <div class="notification-panel" id="notificationPanel" role="region" aria-label="Notifications Panel">
+              <div class="notification-panel-header">
+                <div class="notification-panel-title-wrap">
+                  <h3 class="notification-panel-title">Notifications</h3>
+                  <span class="notification-unread-count" id="notificationUnreadCount">0 new</span>
+                </div>
+                <button class="notification-mark-all-btn" id="notificationMarkAllBtn">Mark all as read</button>
+              </div>
+
+              <div class="notification-list" id="notificationList">
+                <!-- Dynamically populated by notifications.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Profile Avatar Shortcut -->
+          <button class="top-profile-btn" id="topProfileBtn" title="Profile & Preferences"
+            aria-label="Profile and Preferences">
+            <span class="top-profile-avatar" id="topProfileAvatar"><span class="user-initials">TX</span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- View 1: Today Dashboard -->
+      <section id="viewToday" class="view-panel active"></section>
+
+      <!-- View 2: Habits Manager -->
+      <section id="viewHabits" class="view-panel"></section>
+
+      <!-- View 3: Progress & Analytics -->
+      <section id="viewProgress" class="view-panel"></section>
+
+      <!-- View 4: Calendar & History -->
+      <section id="viewCalendar" class="view-panel"></section>
+
+      <!-- View 5: Achievements -->
+      <section id="viewAchievements" class="view-panel"></section>
+
+      <!-- View 6: Settings -->
+      <section id="viewSettings" class="view-panel"></section>
+
+    </main>
+
+    <!-- ==========================================
+         MOBILE BOTTOM NAVIGATION (Visible on Mobile)
+         ========================================== -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+      <a href="#today" class="mobile-nav-item active" data-view="today">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Today</span>
+      </a>
+
+      <a href="#habits" class="mobile-nav-item" data-view="habits">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Habits</span>
+      </a>
+
+      <a href="#progress" class="mobile-nav-item" data-view="progress">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+        <span>Progress</span>
+      </a>
+
+      <a href="#calendar" class="mobile-nav-item" data-view="calendar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Calendar</span>
+      </a>
+
+      <a href="#settings" class="mobile-nav-item" data-view="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path
+            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+          </path>
+        </svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- ==========================================
+       MODAL: NEW HABIT CREATION
+       ========================================== -->
+  <div class="modal-overlay" id="newHabitModal" role="dialog" aria-modal="true" aria-labelledby="modalNewHabitTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalNewHabitTitle">Create New Habit</h2>
+        <button class="modal-close-btn" id="closeNewHabitModalBtn" aria-label="Close Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <form id="newHabitForm">
+        <div class="form-group">
+          <label class="form-label" for="habitNameInput">Habit Name</label>
+          <input type="text" id="habitNameInput" class="form-control" placeholder="e.g. Read 15 minutes, Cold Shower"
+            required maxlength="40">
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label">Category</label>
+          <select id="habitCategoryInput" class="form-control">
+            <option value="mind">Mind & Mindfulness 🧘</option>
+            <option value="body">Body & Health 🏃</option>
+            <option value="focus">Deep Focus & Productivity 🎯</option>
+            <option value="growth">Personal Growth 📖</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label">Select Icon</label>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" class="icon-picker-item selected"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">✨</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">🧘</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">🏃</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">💧</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">📖</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">🎯</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">🌙</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">🍎</button>
+            <button type="button" class="icon-picker-item"
+              style="padding: 8px 12px; border-radius: 8px; background: var(--bg-input); font-size: 20px;">⚡</button>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label" for="habitFrequencyInput">Frequency</label>
+          <select id="habitFrequencyInput" class="form-control">
+            <option value="daily">Every day</option>
+            <option value="weekdays">Weekdays only (Mon - Fri)</option>
+            <option value="weekends">Weekends only</option>
+          </select>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="cancelNewHabitBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Create Habit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL: SKILL DETAIL ANALYTICS DRILLDOWN
+       ========================================== -->
+  <div class="modal-overlay" id="skillDetailModal" role="dialog" aria-modal="true"
+    aria-labelledby="modalSkillDetailTitle">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <div class="skill-modal-title-wrap">
+          <span class="skill-modal-icon" id="skillModalIcon">🎯</span>
+          <div>
+            <h2 class="modal-title" id="modalSkillDetailTitle">Skill Analytics</h2>
+            <span class="skill-modal-subtitle" id="skillModalSubtitle">Personal Development Deep Dive</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeSkillDetailModalBtn" aria-label="Close Modal" title="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="skillModalBody">
+        <!-- Dynamically rendered by progress.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL: DAILY PERFORMANCE SUMMARY
+       ========================================== -->
+  <div class="modal-overlay" id="dailySummaryModal" role="dialog" aria-modal="true" aria-labelledby="dailySummaryTitle">
+    <div class="modal-dialog modal-dialog-summary">
+      <div class="modal-header">
+        <div class="summary-modal-title-wrap">
+          <span class="summary-modal-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </span>
+          <div>
+            <h2 class="modal-title" id="dailySummaryTitle">Daily Summary</h2>
+            <span class="summary-modal-subtitle" id="dailySummarySubtitle">Today's personal growth & momentum
+              recap</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeDailySummaryModalBtn" aria-label="Close Modal" title="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="dailySummaryModalBody">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL: ACHIEVEMENT UNLOCK CELEBRATION
+       ========================================== -->
+  <div class="modal-overlay" id="achievementUnlockModal" role="dialog" aria-modal="true"
+    aria-labelledby="unlockModalTitle">
+    <div class="modal-dialog modal-dialog-celebration">
+      <div class="unlock-modal-content">
+        <div class="unlock-icon-container">
+          <div class="unlock-particle-ring"></div>
+          <span class="unlock-trophy-badge" id="unlockModalBadge">🏆</span>
+        </div>
+
+        <span class="unlock-eyebrow">ACHIEVEMENT UNLOCKED</span>
+        <h2 class="unlock-title" id="unlockModalTitle">Momentum Builder</h2>
+        <p class="unlock-desc" id="unlockModalDesc">7-day habit streak</p>
+
+        <div class="unlock-reward-badge" id="unlockModalReward">
+          <span>+100 XP</span>
+        </div>
+
+        <div class="unlock-level-progress-wrap" id="unlockModalLevelWrap"></div>
+
+        <button class="btn btn-primary unlock-continue-btn" id="unlockModalContinueBtn">
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL: PRODUCT VIDEO SHOWCASE & TOUR
+       ========================================== -->
+  <div class="modal-overlay" id="showcaseModal" role="dialog" aria-modal="true" aria-labelledby="showcaseModalTitle">
+    <div class="modal-dialog modal-dialog-showcase">
+      <div class="modal-header">
+        <div class="showcase-title-wrap">
+          <span class="showcase-badge-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </span>
+          <div>
+            <h2 class="modal-title" id="showcaseModalTitle">TRACKX Showcase</h2>
+            <span class="modal-subtitle">Official 10-Second High Definition Product Tour</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeShowcaseModalBtn" aria-label="Close Showcase Modal" title="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Custom Cinematic Player Container -->
+      <div class="showcase-player-box" id="showcasePlayerBox">
+        <div class="showcase-video-crop-container">
+          <video id="showcaseVideo" class="showcase-video-element"
+            src="video/Track_X_promotional_ad_sequence_20260920123514.mp4" playsinline preload="auto">
+          </video>
+
+          <!-- Watermark Elimination System: Corner Shield + Official Brand Badge -->
+          <div class="showcase-watermark-shield" aria-hidden="true"></div>
+          <div class="showcase-brand-watermark-pill" aria-hidden="true">
+            <span class="brand-watermark-dot">•</span>
+            <span class="brand-watermark-text">TRACKX</span>
+          </div>
+        </div>
+
+        <!-- Center Play Overlay (visible when paused or ended) -->
+        <div class="showcase-center-overlay" id="showcaseCenterOverlay">
+          <button class="showcase-center-play-btn" id="showcaseCenterPlayBtn" aria-label="Play Video">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="7 5 19 12 7 19 7 5"></polygon>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Custom Player Controls Bar -->
+        <div class="showcase-controls-bar">
+          <!-- Progress bar scrubber -->
+          <div class="showcase-progress-bar" id="showcaseProgressBar" role="slider" aria-label="Seek Video"
+            tabindex="0">
+            <div class="showcase-progress-fill" id="showcaseProgressFill"></div>
+          </div>
+
+          <div class="showcase-controls-row">
+            <div class="showcase-controls-left">
+              <button class="showcase-ctrl-btn" id="showcasePlayBtn" aria-label="Play or Pause" title="Play (Space)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+
+              <button class="showcase-ctrl-btn" id="showcaseReplayBtn" aria-label="Replay Video" title="Replay">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 4 1 10 7 10"></polyline>
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+              </button>
+
+              <span class="showcase-time-display" id="showcaseTimeDisplay">0:00 / 0:10</span>
+            </div>
+
+            <div class="showcase-controls-right">
+              <button class="showcase-ctrl-btn" id="showcaseMuteBtn" aria-label="Mute or Unmute" title="Mute (M)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+              </button>
+
+              <button class="showcase-ctrl-btn" id="showcaseFullscreenBtn" aria-label="Toggle Fullscreen"
+                title="Fullscreen (F)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Value Pillars Below Video -->
+      <div class="showcase-features-grid">
+        <div class="showcase-feature-item">
+          <div class="showcase-feature-icon">🎯</div>
+          <div class="showcase-feature-content">
+            <h5>Habit Mastery</h5>
+            <p>Track Mind, Body, Focus & Growth daily</p>
+          </div>
+        </div>
+
+        <div class="showcase-feature-item">
+          <div class="showcase-feature-icon">🔥</div>
+          <div class="showcase-feature-content">
+            <h5>Streak Engine</h5>
+            <p>Visual streaks, confetti & momentum score</p>
+          </div>
+        </div>
+
+        <div class="showcase-feature-item">
+          <div class="showcase-feature-icon">📊</div>
+          <div class="showcase-feature-content">
+            <h5>Deep Analytics</h5>
+            <p>14-day completion trends & milestone XP</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==========================================
+       MODAL: LOCALSTORAGE MIGRATION (Phase 6)
+       ========================================== -->
+  <div class="modal-overlay migration-modal-overlay" id="migrationModal" role="dialog" aria-modal="true"
+    aria-labelledby="migrationTitle">
+    <div class="modal-dialog migration-dialog">
+      <div class="migration-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+        </svg>
+      </div>
+
+      <h2 class="migration-title" id="migrationTitle">TrackX found existing data on this device.</h2>
+      <p class="migration-desc">You can import it into your TrackX account.</p>
+
+      <div class="migration-preview-card">
+        <span class="migration-preview-label">Discovered on this browser:</span>
+        <div class="migration-stats-row">
+          <div class="migration-stat-pill">
+            <span class="migration-stat-val" id="migrateCountHabits">0</span>
+            <span class="migration-stat-lbl">Habits</span>
+          </div>
+          <div class="migration-stat-pill">
+            <span class="migration-stat-val" id="migrateCountLogs">0</span>
+            <span class="migration-stat-lbl">History</span>
+          </div>
+          <div class="migration-stat-pill">
+            <span class="migration-stat-val" id="migrateCountAchievements">0</span>
+            <span class="migration-stat-lbl">Unlocked</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="migration-actions">
+        <button type="button" class="auth-submit-btn" id="btnMigrateImport">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          Import Data
+        </button>
+        <button type="button" class="btn-secondary migration-fresh-btn" id="btnMigrateFresh">
+          Start Fresh
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Core Architecture -->
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/state.js"></script>
+
+  <!-- =========================================================================
+       FIREBASE & AUTHENTICATION SCRIPTS
+       ========================================================================= -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/firestore-sync.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/insights.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/showcase.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/habits.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/achievements.js"></script>
+  <script src="js/landing.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

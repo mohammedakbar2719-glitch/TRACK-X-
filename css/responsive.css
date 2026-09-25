@@ -1,0 +1,527 @@
+/* ==========================================================================
+   TRACKX - Professional Responsive Stylesheet
+   Seamless scaling: 320px mobile -> 768px tablet -> 1024px desktop -> 1920px ultra-wide
+   ========================================================================== */
+
+/* Prevent accidental horizontal scrolling globally */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Mobile Bottom Navigation (Hidden by default on Desktop) */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-height);
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--border-subtle);
+  z-index: 100;
+  padding: 6px 12px calc(6px + env(safe-area-inset-bottom, 0px));
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  flex: 1;
+  max-width: 68px;
+  text-decoration: none;
+}
+
+.mobile-nav-item svg {
+  width: 19px;
+  height: 19px;
+  transition: transform var(--transition-fast);
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+}
+
+.mobile-nav-item.active svg {
+  stroke: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   LARGE & ULTRA-WIDE DESKTOP (>= 1440px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  :root {
+    --sidebar-width: 250px;
+  }
+
+  .main-layout {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 28px 40px 80px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .dashboard-grid {
+    gap: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TABLET & SMALL DESKTOPS (<= 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+
+  .main-layout {
+    padding: 20px 20px 80px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .skill-detail-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .notification-panel {
+    width: 340px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE SCREENS (<= 768px: Tablets, Phablets, Phones)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Hide Desktop Sidebar */
+  .app-sidebar {
+    display: none;
+  }
+
+  /* Show Mobile Bottom Navigation */
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .app-container {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .main-layout {
+    padding: 16px 16px calc(var(--bottom-nav-height) + 24px);
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .top-bar {
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .mobile-brand {
+    display: flex;
+  }
+
+  .hero-score-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+
+  .progress-ring-container {
+    align-self: center;
+    width: 104px;
+    height: 104px;
+  }
+
+  .progress-ring-number {
+    font-size: 24px;
+  }
+
+  .hero-score-info {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .two-column-widgets {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .habits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .achievements-grid,
+  .milestones-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Calendar Responsive Styles */
+  .gcal-toolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .gcal-month-title {
+    font-size: 16px;
+    margin-left: 2px;
+  }
+
+  .gcal-btn-today {
+    padding: 4px 10px;
+    font-size: 11.5px;
+  }
+
+  .gcal-day-cell {
+    min-height: 48px;
+    padding: 3px 2px;
+  }
+
+  .gcal-day-num {
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .gcal-mini-dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .gcal-cell-summary {
+    font-size: 8px;
+  }
+
+  .gcal-detail-panel {
+    padding: 14px;
+  }
+
+  .gcal-detail-habits-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Toasts */
+  .toast-container {
+    top: 14px;
+    bottom: auto;
+    right: 14px;
+    left: 14px;
+    width: auto;
+    max-width: calc(100vw - 28px);
+    align-items: stretch;
+  }
+
+  .toast {
+    width: 100%;
+  }
+
+  /* Notification Popover */
+  .notification-panel {
+    position: fixed;
+    top: 60px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  }
+
+  .top-actions {
+    gap: 8px;
+  }
+
+  .icon-btn-header, .top-profile-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Progress View */
+  .progress-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .progress-header-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .time-range-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .time-range-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .skill-filter-wrap, .skill-filter-select {
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-comparison-row {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .comparison-bar-wrap {
+    display: none;
+  }
+
+  .skill-detail-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Modals */
+  .modal-dialog {
+    padding: 18px;
+    margin: 12px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .modal-dialog-lg {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 16px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .modal-dialog-celebration {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 24px 16px 20px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .modal-dialog-summary {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 18px 16px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .modal-dialog-showcase {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 16px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+  }
+
+  .showcase-features-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .showcase-banner-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .showcase-banner-preview {
+    width: 100%;
+    height: 140px;
+    order: -1;
+  }
+
+  .summary-top-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .summary-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Milestones Page Header */
+  .milestones-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .milestones-header-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .milestone-level-box,
+  .milestones-overall-box {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SMALL PHONES (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .top-bar {
+    justify-content: space-between;
+  }
+
+  .date-navigator {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .top-actions {
+    margin-left: auto;
+  }
+
+  .btn-primary .desktop-text {
+    display: none;
+  }
+
+  .btn-primary {
+    padding: 7px 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   EXTRA SMALL MOBILE (<= 375px: iPhone SE, Galaxy Z Flip)
+   -------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+  .date-nav-center {
+    padding: 0 4px;
+    font-size: 11.5px;
+  }
+
+  .date-today-btn {
+    display: none;
+  }
+
+  .habit-card {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .habit-icon-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .habit-name {
+    font-size: 13px;
+  }
+
+  .habit-streak-pill {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .progress-ring-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .progress-ring-number {
+    font-size: 20px;
+  }
+
+  .hero-score-badge {
+    font-size: 10.5px;
+    padding: 2px 6px;
+  }
+
+  .gcal-day-cell {
+    min-height: 42px;
+    padding: 2px 1px;
+  }
+
+  .gcal-day-num {
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .mobile-nav-item {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  .mobile-nav-item svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ULTRA-COMPACT SCREENS (<= 320px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 320px) {
+  .main-layout {
+    padding: 12px 10px calc(var(--bottom-nav-height) + 18px);
+  }
+
+  .hero-score-card {
+    padding: 14px 12px;
+  }
+
+  .widget-card {
+    padding: 14px 12px;
+  }
+
+  .milestone-card {
+    padding: 12px;
+  }
+
+  .skill-card {
+    padding: 12px 14px;
+  }
+}
+
